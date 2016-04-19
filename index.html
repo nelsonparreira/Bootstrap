@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Based on the video from youtube: https://www.youtube.com/watch?v=e6VYRVRoC40 -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,15 +12,246 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
+    <!-- =================== -->
+    <!-- = Navigation Bar  = -->
+    <!-- =================== -->
+    <!-- Creating the Navigation bar  -->
+    <!-- Black Navbar fixed to the top  -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+        <div class="container">
+            <div class="navbar-header">
+
+                <!-- The brand name -->
+                <a href="#" class="navbar-brand">Wiredwike</a>
+
+                <!-- Make the 3 lines icon for mobile -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div><!-- END navbar-header -->
+
+            <!-- What will appear when we click on the mobile icon option -->
+            <!-- the ID is the one in the data-target. This way we knows what is the "div" to collapse -->
+            <!-- video: 12 min -->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+
+                <!-- NAVBAR mobile -->
+                <ul class="nav navbar-nav"> <!-- Creates the menu  -->
+                    <li class="active text-center"><a href="#">Home</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#faq">Faq</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- DOWNLOAD button -->
+                <a href="#" class="btn btn-warning navbar-btn navbar-right">Download</a>
+
+            </div><!-- END collapse -->
+        </div><!-- END container -->
+    </nav><!-- END nav -->
 
 
+    <!-- =================== -->
+    <!-- = Jumbotron  = -->
+    <!-- =================== -->
+
+    <section class="jumbotron">
+        <div class="container text-center">
+            <h1>Wiredwiki App</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+
+            <!-- We will creat a group of 3 buttons -->
+            <div class="btn-group">
+                <a href="#" class="btn btn-lg btn-warning">Download App</a>
+                <a href="#" class="btn btn-lg btn-default">Visit Store</a>
+                <a href="#" class="btn btn-lg btn-warning">Spread the Word</a>
+            </div><!-- END btn-group -->
+
+        </div><!-- END container -->
+    </section><!-- END jumbotron -->
 
 
+    <!-- ==================== -->
+    <!-- = FeedBack         = -->
+    <!-- = video: 23:11 min = -->
+    <!-- ==================== -->
+    <div class="container">
+        <section>
+            <div class="page-header" id="feedback">
+                <h2>Feedback <small>Check out the Awesome Feedback</small></h2>
+            </div><!-- END page-header -->
 
+            <!-- Let's define the 3 coluns  -->
+            <!-- We will have a quote a paragraph and a footer -->
+            <div class="row">
+                <!-- First column -->
+                <div class="col-lg-4">
+                    <blockquote cite="http://">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt ducimus debitis rem delectus cum, suscipit optio eligendi repellat facere, a, atque. Distinctio provident asperiores et id odit, qui animi.</p>
+                        <footer>john Doe</footer>
+                    </blockquote>
+                </div><!-- END First Column -->
+
+                <!-- Second column -->
+                <div class="col-lg-4">
+                    <blockquote cite="http://">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt ducimus debitis rem delectus cum, suscipit optio eligendi repellat facere, a, atque. Distinctio provident asperiores et id odit, qui animi.</p>
+                        <footer>john Doe</footer>
+                    </blockquote>
+                </div><!-- END Second Column  -->
+
+                <!-- Third column -->
+                <div class="col-lg-4">
+                    <blockquote cite="http://">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt ducimus debitis rem delectus cum, suscipit optio eligendi repellat facere, a, atque. Distinctio provident asperiores et id odit, qui animi.</p>
+                        <footer>john Doe</footer>
+                    </blockquote>
+                </div><!-- END Third Column  -->
+
+            </div><!-- END row -->
+
+        </section><!-- END -->
+    </div><!-- END container -->
+
+    <!-- ++++++++++++++++++ -->
+    <!--   Call to Action   -->
+    <!-- ++++++++++++++++++ -->
+    <section>
+        <div class="well"> <!-- faz o efeito de background -->
+            <div class="container text-center">
+                <h3>Subcribe for more free stuff</h3>
+                <p>Enter your name and email</p>
+
+                <form action="" class="form-inline">
+                    <!-- Enter the Name -->
+                    <div class="form-group">
+                        <label for="subscription">Subscribe</label>
+                        <input type="text" class="form-control" id="subscription" placeholder="Your name">
+                    </div><!-- END form-group -->
+
+                    <!-- Enter the e-mail-->
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                    </div><!-- END form-group -->
+
+                    <button type="submit" class="btn btn-default">Subscribe</button>
+                    <hr>
+                </form><!-- END form -->
+
+            </div><!-- END container -->
+        </div><!-- END well -->
+    </section>
+
+
+    <!-- ==================== -->
+    <!-- = Gallery         = -->
+    <!-- = video: 33:30 min = -->
+    <!-- ==================== -->
+    <div class="container">
+        <section>
+            <div class="page-header" id="gallery">
+                <h2>Gallery<small>Check out the Awesome gallery</small></h2>
+            </div><!-- END page-header -->
+
+            <!-- Creating our slider -->
+            <div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
+
+                <!-- ++++++++++++++++++++ -->
+                <!--   Putting the Dots   -->
+                <!-- ++++++++++++++++++++ -->
+                <!-- The indicators are the little dots at the bottom of each slide
+                     (which indicates how many slides there is in the carousel,
+                     and which slide the user are currently viewing). -->
+                <ol class="carousel-indicators">
+                    <li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#screenshot-carousel" data-slide-to="1"></li>
+                    <li data-target="#screenshot-carousel" data-slide-to="2"></li>
+                    <li data-target="#screenshot-carousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- ++++++++++++++++++++ -->
+                <!--   Puting the images  -->
+                <!-- ++++++++++++++++++++ -->
+                <div class="carousel-inner">
+
+                    <!-- First Image -->
+                    <div class="item active">
+                        <!-- Image of the slider -->
+                        <img src="images/highway.jpg" alt="Text of the image">
+                        <!-- Text on top of the image -->
+                        <div class="carousel-caption">
+                            <h3>Chania</h3>
+                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                      </div>
+                    </div>
+
+                    <!-- Second Image -->
+                    <div class="item">
+                        <!-- Image of the slider -->
+                        <img src="images/river.jpg" alt="Text of the image">
+                        <!-- Text on top of the image -->
+                        <div class="carousel-caption">
+                            <h3>Chania</h3>
+                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                      </div>
+                    </div>
+
+                    <!-- Third Image -->
+                    <div class="item">
+                        <!-- Image of the slider -->
+                        <img src="images/street.jpg" alt="Text of the image">
+                        <!-- Text on top of the image -->
+                        <div class="carousel-caption">
+                            <h3>Chania</h3>
+                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                      </div>
+                    </div>
+
+                    <!-- Fourd Image -->
+                    <div class="item">
+                        <!-- Image of the slider -->
+                        <img src="images/painting.jpg" alt="Text of the image">
+                        <!-- Text on top of the image -->
+                        <div class="carousel-caption">
+                            <h3>Chania</h3>
+                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                      </div>
+                    </div>
+
+                </div><!-- END carousel-inner -->
+
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <!--   Put the arrows on right and left side of the Slider  -->
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                <!-- Left  -->
+                <a href="#screenshot-carousel" class="left carousel-control" data-slide="prev" >
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+
+                <!-- Right  -->
+                <a href="#screenshot-carousel" class="right carousel-control" data-slide="next" >
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div><!-- END carousel -->
+
+        </section>
+    </div> <!-- END container -->
+
+
+    <!-- =================== -->
     <!--Jquery -->
     <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
