@@ -3,14 +3,30 @@
 
 <html lang="en">
 <head>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
     <meta charset="UTF-8">
     <title>Bootstrap Lesson1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Lasted rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- BOOTSTRAP -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!--Jquery -->
+    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
 
     <!-- CSS Style -->
     <link rel="stylesheet" href="css/style.css">
@@ -18,6 +34,37 @@
 </head>
 
 <body>
+    <script>
+    //userAgent in IE7 WinXP returns: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 2.0.50727)
+    //userAgent in IE11 Win7 returns: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko
+
+    if (navigator.userAgent.indexOf('MSIE') != -1)
+    var detectIEregexp = /MSIE (\d+\.\d+);/ //test for MSIE x.x
+    else // if no "MSIE" string in userAgent
+    var detectIEregexp = /Trident.*rv[ :]*(\d+\.\d+)/ //test for rv:x.x or rv x.x where Trident string exists
+
+    if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
+    var ieversion=new Number(RegExp.$1) // capture x.x portion and store as a number
+    if (ieversion>=12){alert('You\'re using IE12 or above')}
+        {alert('You\'re using IE12 or above')}
+    else if (ieversion>=11)
+        {alert('You\'re using IE11 or above')}
+    else if (ieversion>=10)
+        {alert('You\'re using IE10 or above')}
+    else if (ieversion>=9){
+        alert('You\'re using IE9 or above')}
+    else if (ieversion<=8){
+        $( document ).ready(function() {
+            $("body").html("<h1>Browser Not supported</1>")
+        });
+        alert('You\'re using a unsuported version of Internet Explorer. Please update it, or use a diferent browser. ')
+
+    }
+    else{
+    alert('Not Available')
+    }
+    </script>
+
     <!-- =================== -->
     <!-- = Navigation Bar  = -->
     <!-- =================== -->
@@ -73,9 +120,9 @@
 
             <!-- We will creat a group of 3 buttons -->
             <div class="btn-group">
-                <a href="#" class="btn btn-lg btn-warning">Download App</a>
-                <a href="#" class="btn btn-lg btn-default">Visit Store</a>
-                <a href="#" class="btn btn-lg btn-warning">Spread the Word</a>
+                <a href="#" class="btn btn-md btn-warning">Download App</a>
+                <a href="#" class="btn btn-md btn-default">Visit Store</a>
+                <a href="#" class="btn btn-md btn-warning">Spread the Word</a>
             </div><!-- END btn-group -->
 
         </div><!-- END container -->
@@ -96,7 +143,7 @@
             <!-- We will have a quote a paragraph and a footer -->
             <div class="row">
                 <!-- First column -->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <blockquote cite="http://">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt ducimus debitis rem delectus cum, suscipit optio eligendi repellat facere, a, atque. Distinctio provident asperiores et id odit, qui animi.</p>
                         <footer>john Doe</footer>
@@ -104,7 +151,7 @@
                 </div><!-- END First Column -->
 
                 <!-- Second column -->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <blockquote cite="http://">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt ducimus debitis rem delectus cum, suscipit optio eligendi repellat facere, a, atque. Distinctio provident asperiores et id odit, qui animi.</p>
                         <footer>john Doe</footer>
@@ -112,7 +159,7 @@
                 </div><!-- END Second Column  -->
 
                 <!-- Third column -->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <blockquote cite="http://">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sunt ducimus debitis rem delectus cum, suscipit optio eligendi repellat facere, a, atque. Distinctio provident asperiores et id odit, qui animi.</p>
                         <footer>john Doe</footer>
@@ -269,13 +316,13 @@
             <!-- First ROW -->
             <div class="row">
                 <!-- First Column -->
-                <div class="col-lg-8">
+                <div class="col-md-8">
                     <h3>This is the Heading</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolorem repellat quidem. </p>
                 </div>
 
                 <!-- Second Column -->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <img src="images/imac.jpg" alt="Image Mac" class="img-responsive">
                 </div>
             </div> <!-- END Row -->
@@ -283,13 +330,13 @@
             <!-- Second ROW -->
             <div class="row">
                 <!-- First Column -->
-                <div class="col-lg-8">
+                <div class="col-md-8">
                     <h3>This is the Heading</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolorem repellat quidem. </p>
                 </div>
 
                 <!-- Second Column -->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <img src="images/smartphone.jpg" alt="Smartphone Image" class="img-responsive">
                 </div>
             </div> <!-- END Row -->
@@ -297,13 +344,13 @@
             <!-- Third ROW -->
             <div class="row">
                 <!-- First Column -->
-                <div class="col-lg-8">
+                <div class="col-md-8">
                     <h3>This is the Heading</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolorem repellat quidem. </p>
                 </div>
 
                 <!-- Second Column -->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <img src="images/user.jpg" alt="user Image" class="img-responsive img-res-row">
                 </div>
             </div> <!-- END Row -->
@@ -315,7 +362,7 @@
             <!-- +++++++++++++++++++++++ -->
             <div class="row">
                 <!-- First Column -->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <div class="panel panel-default text-center">
                         <div class="panel-body">
                             <span class="glyphicon glyphicon-ok"></span>
@@ -326,7 +373,7 @@
                 </div><!-- END col -->
 
                 <!-- Second Column -->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <div class="panel panel-default text-center">
                         <div class="panel-body">
                             <span class="glyphicon glyphicon-star"></span>
@@ -337,7 +384,7 @@
                 </div><!-- END col -->
 
                 <!-- Third Column -->
-                <div class="col-lg-4">
+                <div class="col-md-4">
                     <div class="panel panel-default text-center">
                         <div class="panel-body">
                             <span class="glyphicon glyphicon-play-circle"></span>
@@ -354,9 +401,10 @@
 
 
     <!-- =================== -->
-    <!--Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
 </body>
 </html>
