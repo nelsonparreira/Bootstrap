@@ -1,3 +1,11 @@
 body{
     padding-top: 40px; /* creat space between the h1 header of the jumbotron and the navbar */
 }
+
+.bigger-header {
+    padding: 30px 0 10px 0;
+}
+
+.img-res-row {
+    width: 100px
+}
